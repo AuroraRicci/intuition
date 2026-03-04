@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finance Assistant</title>
+<link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+<div id="app">
+
+<header class="topbar">
+<div class="title">Finance Assistant</div>
+</header>
+
+<nav class="tabs">
+<button data-screen="dashboard">🏠 Dashboard</button>
+<button data-screen="transactions">💳 Transactions</button>
+<button data-screen="budget">📊 Budget</button>
+<button data-screen="stats">📈 Statistics</button>
+<button data-screen="more">⚙️ More</button>
+</nav>
+
+<main class="screens">
+
+<section id="screen-dashboard" class="screen">
+<div id="dashboard-balance"></div>
+<div id="dashboard-summary"></div>
+<div id="dashboard-recent"></div>
+<button id="dashboard-add">➕ Add Transaction</button>
+</section>
+
+<section id="screen-transactions" class="screen">
+<div id="transactions-filters"></div>
+<div id="transactions-list"></div>
+</section>
+
+<section id="screen-budget" class="screen">
+<div id="budget-overview"></div>
+<div id="budget-categories"></div>
+</section>
+
+<section id="screen-stats" class="screen">
+<div id="stats-period"></div>
+<div id="stats-income-expense"></div>
+<div id="stats-categories"></div>
+</section>
+
+<section id="screen-more" class="screen">
+
+<div class="more-item" data-screen="categories">📁 Categories</div>
+<div class="more-item" data-screen="goals">🎯 Goals</div>
+<div class="more-item" data-screen="bills">🧾 Bills</div>
+<div class="more-item" data-screen="settings">⚙️ Settings</div>
+
+</section>
+
+<section id="screen-categories" class="screen">
+<div id="categories-income"></div>
+<div id="categories-expense"></div>
+<button id="category-add">➕ Add Category</button>
+</section>
+
+<section id="screen-goals" class="screen">
+<div id="goals-list"></div>
+<button id="goal-add">➕ Add Goal</button>
+</section>
+
+<section id="screen-bills" class="screen">
+<div id="bills-list"></div>
+<button id="bill-add">➕ Add Bill</button>
+</section>
+
+<section id="screen-settings" class="screen">
+
+<div class="settings-item">
+<label>Currency</label>
+<select id="settings-currency"></select>
+</div>
+
+<div class="settings-item">
+<label>Theme</label>
+<select id="settings-theme">
+<option value="dark">Dark</option>
+<option value="light">Light</option>
+</select>
+</div>
+
+<button id="settings-privacy">Privacy Policy</button>
+
+</section>
+
+</main>
+
+<div id="modal-root"></div>
+
+</div>
+
+<script src="app.config.js"></script>
+<script src="app.storage.js"></script>
+<script src="app.utils.js"></script>
+<script src="app.state.js"></script>
+<script src="app.router.js"></script>
+<script src="app.ui.js"></script>
+<script src="feature.transactions.js"></script>
+<script src="feature.categories.js"></script>
+<script src="feature.budget.js"></script>
+<script src="feature.goals.js"></script>
+<script src="feature.bills.js"></script>
+<script src="feature.stats.js"></script>
+<script src="feature.settings.js"></script>
+<script src="app.main.js"></script>
+
+</body>
+</html>

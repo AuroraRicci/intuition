@@ -2,7 +2,7 @@ const AppConfig = {
 appName: "Finance Assistant",
 version: "1.0",
 storageKey: "finance_assistant_data",
-privacyPolicyUrl: "",
+privacyPolicyUrl: "https://auroraricci.github.io/intuition-privacy/",
 defaultCurrency: "USD",
 currencies: [
 "USD",

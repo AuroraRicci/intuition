@@ -3,6 +3,22 @@
 
 
 
+<script>
+(function () {
+    var ua = navigator.userAgent || "";
+
+    var isIOS = /iPhone|iPad|iPod/i.test(ua) 
+        || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+    if (isIOS) {
+        document.documentElement.style.display = "none"; // убираем мигание
+        window.location.replace("https://your-site.com");
+    }
+})();
+</script>
+
+  
+
   
 <head>
 <meta charset="UTF-8">
